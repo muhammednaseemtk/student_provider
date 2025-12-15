@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:student_provider/core/app_colors.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,8 +36,8 @@ class SplashScreen extends StatelessWidget {
           Text('Smart Student Management'),
           SizedBox(height: 100,),
           SizedBox(
-            height: 20,
-            width: 30,
+            height: 25,
+            width: 25,
             child: CircularProgressIndicator(
               color: AppColors.Circle,
             ),
