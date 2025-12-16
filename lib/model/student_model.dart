@@ -4,18 +4,18 @@ part 'student_model.g.dart';
 
 @HiveType(typeId: 0)
 class StudentModel {
-  @HiveField(0)
+  @HiveField(1)
   String studentName;
 
-  @HiveField(1)
+  @HiveField(2)
   String studentClass;
 
-  @HiveField(2)
-  String classGrade;
+  @HiveField(3)
+  String studentGrade;
 
-StudentModel({
-  required this.studentName,
-  required this.studentClass,
-required this.classGrade
-});
+  StudentModel({
+    required this.studentName,
+    required this.studentClass,
+    required this.studentGrade,
+  });
 }
