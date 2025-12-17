@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   if (value.isLoading) {
                     return Center(child: CircularProgressIndicator(color: AppColors.Circle,));
                   } else if (value.data.isEmpty) {
-                    return Center(child: CircularProgressIndicator(color: AppColors.Circle,));
+                    return Center(child: Text("no data added"));
                   }
 
                   return ListView.builder(

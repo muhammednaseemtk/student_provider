@@ -86,7 +86,10 @@ class _AddScreenState extends State<AddScreen> {
                         studentGrade: studentGradeController.text.trim(),
                       );
 
-                      Provider.of<StudentController>(context,listen: false).addStudent(student);
+                      Provider.of<StudentController>(
+                        context,
+                        listen: false,
+                      ).addStudent(student);
 
                       Navigator.pop(context);
                     }
