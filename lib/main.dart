@@ -12,19 +12,21 @@ void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(StudentModelAdapter());
 
-  runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(create: (context)=>StudentController())
-  ],  child: MyApp()));
-  
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => StudentController()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
   }
 }
