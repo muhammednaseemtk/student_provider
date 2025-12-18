@@ -7,17 +7,15 @@ import 'package:student_provider/core/app_colors.dart';
 import 'package:student_provider/model/student_model.dart';
 import 'package:student_provider/service/function.dart';
 
-class AddScreen extends StatefulWidget {
-  const AddScreen({super.key});
+class AddScreen extends StatelessWidget {
+   AddScreen({super.key});
 
-  @override
-  State<AddScreen> createState() => _AddScreenState();
-}
-
-class _AddScreenState extends State<AddScreen> {
   final TextEditingController studentNameController = TextEditingController();
+
   final TextEditingController studentClassController = TextEditingController();
+
   final TextEditingController studentGradeController = TextEditingController();
+
   final formKey = GlobalKey<FormState>();
 
   @override

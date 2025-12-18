@@ -21,10 +21,7 @@ class EditScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = context.read<StudentController>();
-
-    // set initial data ONCE
     controller.setEditData(student);
-
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
@@ -43,15 +40,25 @@ class EditScreen extends StatelessWidget {
                   text: 'Student Name',
                   text1: 'type name',
                   controller: controller.nameController,
-                  validator: (v) =>
-                      v == null || v.isEmpty ? 'name is required' : null,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'name is required';
+                    }else{
+                      return null;
+                    }
+                  }
                 ),
                 CustomTextField(
                   text: 'Student Class',
                   text1: 'type class',
                   controller: controller.classController,
-                  validator: (v) =>
-                      v == null || v.isEmpty ? 'class is required' : null,
+                  validator: (value) {
+                    if (value) {
+                      
+                    } else {
+                      
+                    }
+                  }
                 ),
                 CustomTextField(
                   text: 'Student Grade',
