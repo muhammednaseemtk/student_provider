@@ -41,7 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Consumer<StudentController>(
                 builder: (context, value, _) {
                   if (value.isLoading) {
-                    return Center(child: CircularProgressIndicator(color: AppColors.Circle,));
+                    return Center(
+                      child: CircularProgressIndicator(color: AppColors.Circle),
+                    );
                   } else if (value.data.isEmpty) {
                     return Center(child: Text("no data added"));
                   }

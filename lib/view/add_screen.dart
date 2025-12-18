@@ -8,14 +8,10 @@ import 'package:student_provider/model/student_model.dart';
 import 'package:student_provider/service/function.dart';
 
 class AddScreen extends StatelessWidget {
-   AddScreen({super.key});
-
+  AddScreen({super.key});
   final TextEditingController studentNameController = TextEditingController();
-
   final TextEditingController studentClassController = TextEditingController();
-
   final TextEditingController studentGradeController = TextEditingController();
-
   final formKey = GlobalKey<FormState>();
 
   @override
