@@ -17,22 +17,22 @@ class CustomTextField extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(5),
-            child: Text(text, style: TextStyle(color: AppColors.iconColor)),
+            child: Text(text, style: TextStyle(color: AppColors.icon)),
           ),
           TextFormField(
-            cursorColor: AppColors.iconColor,
+            cursorColor: AppColors.icon,
             obscureText: obsecureValue,
             controller: controller,
             validator: validator,
             decoration: InputDecoration(
-              hintStyle: TextStyle(color: AppColors.iconColor),
+              hintStyle: TextStyle(color: AppColors.icon),
               hintText: text1,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: BorderSide(color: AppColors.iconColor)
+                borderSide: BorderSide(color: AppColors.icon)
               )
             ),
           ),

@@ -17,14 +17,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-
     Provider.of<StudentController>(context, listen: false).initDb();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.background,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Expanded(
               child: Consumer<StudentController>(
-                builder: (context, value, _) {
+                builder: (context, value,_) {
                   if (value.isLoading) {
                     return Center(
                       child: CircularProgressIndicator(color: AppColors.Circle),
@@ -46,14 +45,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   } else if (value.data.isEmpty) {
                     return Center(child: Text("no data added"));
                   }
-
                   return ListView.builder(
                     itemCount: value.data.length,
                     itemBuilder: (context, i) {
                       final index = value.data.length - 1 - i;
                       final data = value.data[index];
                       return Card(
-                        color: Colors.white,
+                        color: AppColors.card,
                         margin: EdgeInsets.symmetric(
                           horizontal: 16,
                           vertical: 5,
@@ -69,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               IconButton(
                                 icon: Icon(
                                   Icons.edit,
-                                  color: AppColors.iconColor,
+                                  color: AppColors.icon,
                                 ),
                                 onPressed: () {
                                   Navigator.push(
@@ -86,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               IconButton(
                                 icon: Icon(
                                   Icons.delete,
-                                  color: AppColors.iconColor,
+                                  color: AppColors.icon,
                                 ),
                                 onPressed: () {
                                   context
@@ -110,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.all(28.0),
         child: FloatingActionButton(
           backgroundColor: AppColors.Circle,
-          child: Icon(Icons.add, color: AppColors.iconColor),
+          child: Icon(Icons.add, color: AppColors.icon),
           onPressed: () {
             Navigator.push(
               context,

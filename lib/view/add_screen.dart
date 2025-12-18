@@ -16,7 +16,7 @@ class AddScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         title: Text('Add Screen'),
         centerTitle: true,
@@ -87,7 +87,7 @@ class AddScreen extends StatelessWidget {
                       Navigator.pop(context);
                     }
                   },
-                  textColor: AppColors.iconColor,
+                  textColor: AppColors.icon,
                   bgColor: AppColors.Circle,
                 ),
                 SizedBox(height: 30),

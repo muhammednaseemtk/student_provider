@@ -8,6 +8,7 @@ import 'package:student_provider/model/student_model.dart';
 
 class EditScreen extends StatelessWidget {
   final StudentModel student;
+  
   final int index;
 
   EditScreen({
@@ -23,7 +24,7 @@ class EditScreen extends StatelessWidget {
     final controller = context.read<StudentController>();
     controller.setEditData(student);
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         title: Text('Edit Student'),
         centerTitle: true,
@@ -78,7 +79,7 @@ class EditScreen extends StatelessWidget {
               children: [
                 CommonButton(
                    text: 'Update',
-                   textColor: AppColors.iconColor,
+                   textColor: AppColors.icon,
                    bgColor: AppColors.Circle,
                    onTap: () {
                      if (formKey.currentState!.validate()) {

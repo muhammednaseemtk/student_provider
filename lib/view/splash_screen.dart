@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.background,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: CircleAvatar(
               backgroundColor: AppColors.Circle,
               radius: 80,
-              child: Icon(Icons.school, color: AppColors.iconColor, size: 80),
+              child: Icon(Icons.school, color: AppColors.icon, size: 80),
             ),
           ),
           SizedBox(height: 15),
