@@ -5,7 +5,6 @@ import 'package:student_provider/common/widget/custom_textfield.dart';
 import 'package:student_provider/controller/controller.dart';
 import 'package:student_provider/core/app_colors.dart';
 import 'package:student_provider/model/student_model.dart';
-import 'package:student_provider/service/function.dart';
 
 class AddScreen extends StatelessWidget {
   AddScreen({super.key});

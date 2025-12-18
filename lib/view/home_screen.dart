@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:student_provider/controller/controller.dart';
 import 'package:student_provider/core/app_colors.dart';
 import 'package:student_provider/model/student_model.dart';
-import 'package:student_provider/service/function.dart';
 import 'package:student_provider/view/add_screen.dart';
 import 'package:student_provider/view/edit_screen.dart';
 
