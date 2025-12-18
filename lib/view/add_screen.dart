@@ -90,7 +90,7 @@ class AddScreen extends StatelessWidget {
                   textColor: AppColors.iconColor,
                   bgColor: AppColors.Circle,
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 30),
               ],
             ),
           ],

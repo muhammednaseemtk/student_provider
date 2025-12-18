@@ -72,7 +72,11 @@ class EditScreen extends StatelessWidget {
                     }
                   }
                 ),
-                 CommonButton(
+              ],
+            ),
+            Column(
+              children: [
+                CommonButton(
                    text: 'Update',
                    textColor: AppColors.iconColor,
                    bgColor: AppColors.Circle,
@@ -83,10 +87,9 @@ class EditScreen extends StatelessWidget {
                      }
                    },
                  ),
+                 SizedBox(height: 30,)
               ],
             ),
-           
-            SizedBox(height: 20),
           ],
         ),
       ),
