@@ -64,8 +64,13 @@ class EditScreen extends StatelessWidget {
                   text: 'Student Grade',
                   text1: 'type grade',
                   controller: controller.gradeController,
-                  validator: (v) =>
-                      v == null || v.isEmpty ? 'grade is required' : null,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'grade is required';
+                    } else {
+                      return null;
+                    }
+                  }
                 ),
                  CommonButton(
                    text: 'Update',
