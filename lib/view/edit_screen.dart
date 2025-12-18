@@ -53,10 +53,10 @@ class EditScreen extends StatelessWidget {
                   text1: 'type class',
                   controller: controller.classController,
                   validator: (value) {
-                    if (value) {
-                      
+                    if (value == null || value.isEmpty) {
+                      return 'class is required';
                     } else {
-                      
+                      return null;
                     }
                   }
                 ),
