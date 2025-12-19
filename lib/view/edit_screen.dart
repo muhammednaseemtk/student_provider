@@ -26,7 +26,7 @@ class EditScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text('Edit Student'),
+        title: Text('Edit Student',style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: AppColors.Circle,
       ),

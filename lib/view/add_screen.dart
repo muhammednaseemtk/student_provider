@@ -18,7 +18,7 @@ class AddScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text('Add Screen'),
+        title: Text('Add Screen',style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: AppColors.Circle,
       ),

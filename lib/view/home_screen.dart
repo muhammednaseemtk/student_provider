@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Expanded(
               child: Consumer<StudentController>(
-                builder: (context, value,_) {
+                builder: (context, value, _) {
                   if (value.isLoading) {
                     return Center(
                       child: CircularProgressIndicator(color: AppColors.Circle),
@@ -65,10 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               IconButton(
-                                icon: Icon(
-                                  Icons.edit,
-                                  color: AppColors.icon,
-                                ),
+                                icon: Icon(Icons.edit, color: AppColors.icon),
                                 onPressed: () {
                                   Navigator.push(
                                     context,
@@ -82,10 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 },
                               ),
                               IconButton(
-                                icon: Icon(
-                                  Icons.delete,
-                                  color: AppColors.icon,
-                                ),
+                                icon: Icon(Icons.delete, color: AppColors.icon),
                                 onPressed: () {
                                   context
                                       .read<StudentController>()

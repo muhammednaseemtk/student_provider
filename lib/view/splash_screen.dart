@@ -32,13 +32,25 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: CircleAvatar(
-              backgroundColor: AppColors.Circle,
-              radius: 80,
-              child: Icon(Icons.school, color: AppColors.icon, size: 80),
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.shadow,
+                    blurRadius: 20,
+                    spreadRadius: 2,
+                  ),
+                ],
+              ),
+              child: CircleAvatar(
+                backgroundColor: AppColors.Circle,
+                radius: 80,
+                child: Icon(Icons.school, color: AppColors.icon, size: 80),
+              ),
             ),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 20),
           Text(
             'ClassRoll',
             style: TextStyle(fontSize: 35, fontWeight: FontWeight.w900),
