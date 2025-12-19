@@ -8,14 +8,10 @@ import 'package:student_provider/model/student_model.dart';
 
 class EditScreen extends StatelessWidget {
   final StudentModel student;
-  
+
   final int index;
 
-  EditScreen({
-    super.key,
-    required this.student,
-    required this.index,
-  });
+  EditScreen({super.key, required this.student, required this.index});
 
   final formKey = GlobalKey<FormState>();
 
@@ -26,7 +22,10 @@ class EditScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text('Edit Student',style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(
+          'Edit Student',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         backgroundColor: AppColors.Circle,
       ),
@@ -44,10 +43,10 @@ class EditScreen extends StatelessWidget {
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'name is required';
-                    }else{
+                    } else {
                       return null;
                     }
-                  }
+                  },
                 ),
                 CustomTextField(
                   text: 'Student Class',
@@ -59,7 +58,7 @@ class EditScreen extends StatelessWidget {
                     } else {
                       return null;
                     }
-                  }
+                  },
                 ),
                 CustomTextField(
                   text: 'Student Grade',
@@ -71,24 +70,24 @@ class EditScreen extends StatelessWidget {
                     } else {
                       return null;
                     }
-                  }
+                  },
                 ),
               ],
             ),
             Column(
               children: [
                 CommonButton(
-                   text: 'Update',
-                   textColor: AppColors.icon,
-                   bgColor: AppColors.Circle,
-                   onTap: () {
-                     if (formKey.currentState!.validate()) {
-                       controller.updateStudentData(index);
-                       Navigator.pop(context);
-                     }
-                   },
-                 ),
-                 SizedBox(height: 30,)
+                  text: 'Update',
+                  textColor: AppColors.icon,
+                  bgColor: AppColors.Circle,
+                  onTap: () {
+                    if (formKey.currentState!.validate()) {
+                      controller.updateStudentData(index);
+                      Navigator.pop(context);
+                    }
+                  },
+                ),
+                SizedBox(height: 30),
               ],
             ),
           ],
