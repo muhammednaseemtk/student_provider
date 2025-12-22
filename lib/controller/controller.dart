@@ -8,7 +8,7 @@ class StudentController extends ChangeNotifier {
 
   late Box<StudentModel> studentBox;
 
- late TextEditingController nameController;
+  late TextEditingController nameController;
   late TextEditingController classController;
   late TextEditingController gradeController;
 
@@ -32,12 +32,12 @@ class StudentController extends ChangeNotifier {
     getData();
   }
 
-  void getData()async {
+  void getData() async {
     isLoading = true;
     notifyListeners();
     data = studentBox.values.toList();
-   await Future.delayed(Duration(seconds: 1));
-   isLoading = false;
+    await Future.delayed(Duration(seconds: 1));
+    isLoading = false;
     notifyListeners();
   }
 
